@@ -2,7 +2,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
 	<meta name="apple-mobile-web-app-capable" content="YES">
 
-	<base href="http://2inchesofwater.com/">
+	<!-- <base href="http://2inchesofwater.com/"> -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<title>Dan Gilmore.</title>
 	<script>
@@ -18,60 +18,63 @@
 </head>
 
 <body class="home " style="">
-	<a href="#main" class="sr-only">Skip to content</a>
-	
-	<menu class="nav ">
-		<h2>Menu</h2>
-		<ul>
-			<li class="item-101 current active">
-				<a href="/index.php">Home.</a>
-			</li>
-			<li class="item-103">
-				<a href="#portfolio">Porfolio.</a>
-			</li>
-			<li class="item-104">
-				<a href="#perspectives">Perspectives.</a>
-			</li>
-			<li class="item-105">
-				<a href="#life">Life.</a>
-			</li>
-		</ul>
-	</menu>
+	<a href="#main" class="sr-only">Skip to main content</a>
 	
 	<header id="header">
 		<h1>
 			<a href="/" class="logo">Dan Gilmore.</a>
 		</h1>
+		
+		<nav>
+			<button id="nav-toggle" class="nav-toggle" id="navToggle">Menu</button>
+		</nav>	
 	</header>
 
-	<nav>
-		<button id="nav-toggle" class="nav-toggle">Menu</button>
-	</nav>
+	<menu aria-labelledBy="navToggle" aria-expanded="false">
+		<h2 >Contents.</h2>
+		<ul class="list-unstyled">
+			<li class="">
+				<a href="/index.php">Home.</a>
+			</li>
+			<li class="">
+				<a href="#portfolio">Porfolio.</a>
+			</li>
+			<li class="">
+				<a href="#perspectives">Perspectives.</a>
+			</li>
+			<li class="">
+				<a href="#life">Life.</a>
+			</li>
+		</ul>
+	</menu>	
 
-<div class="container jumbotron">
+	<div class="modal-screen"></div>
+	
+<section class="container jumbotron">
 	<picture id="">
 		<!-- <source media="(min-width: 1400px )" srcset="images/Upload_2000px/home-japan-1.jpg"> 
 		<source media="(min-width: 1024px )" srcset="images/Upload_2000px/home-japan-1.jpg"> 
 		<source media="(min-width: 768px )" srcset="images/Upload_2000px/home-japan-1.jpg"> 
 		<source media="" srcset="images/Upload_2000px/home-japan-1.jpg"> -->						
-		<img src="images/px/home-japan-1.jpg" class="" alt="">						
+		<img src="images/2000px/home-japan-1.jpg" class="" alt="">						
 		<p class="sr-only">Dan Gilmore.</p>
 	</picture>
 
 	<div class="bannergroup">
 		<div class="banneritem">
 			<div class="panel">
-				<div class="panel-body">
-					<h2>Digital + Life.</h2>
-				</div>
 				<div class="panel-heading panel-display-heading">
-					<p class="language-japanese">こんにちは.</p>
+					<h1 class="language-japanese">こんにちは.</h1>
+				</div>				
+				<div class="panel-body">
+					<p>Digital + Life.</p>
 				</div>
+
 			</div>				
 			<div class="clr"></div>
 		</div>
 	</div>
-</div>
+</section>
 		
 <section id="main" class="main container">
 	<article id="home">
@@ -91,17 +94,59 @@
 		<ul class="teasers list-unstyled">
 			<li class="teaser">
 				<div class="teaser-media">
-					<!-- <span class="responsive-background show-xs" style="background-image: url(http://2inchesofwater.com/images/600px/digital-performax-1.jpg)"></span> 
-					<span class="responsive-background show-sm" style="background-image: url(http://2inchesofwater.com/images/800px/digital-performax-1.jpg)"></span> 
-					<span class="responsive-background show-md show-lg" style="background-image: url(http://2inchesofwater.com/images/1400px/digital-performax-1.jpg)"></span>-->					
+					<img src="images/800px/digital-performax-1.jpg" aria-hidden="true">					
 				</div>
 				
 				<div class="teaser-link">
 					<a href="/index.php/digital/13-performax">
-						<h3>Performax</h3>
+						<h2>Performax.</h2>
 					</a>
 				</div>
 			</li>
+			<li class="teaser">
+				<div class="teaser-media">
+					<img src="images/800px/digital-performax-1.jpg" aria-hidden="true">					
+				</div>
+				
+				<div class="teaser-link">
+					<a href="/index.php/digital/13-performax">
+						<h2>Performax.</h2>
+					</a>
+				</div>
+			</li>
+			<li class="teaser">
+				<div class="teaser-media">
+					<img src="images/800px/digital-performax-1.jpg" aria-hidden="true">					
+				</div>
+				
+				<div class="teaser-link">
+					<a href="/index.php/digital/13-performax">
+						<h2>Performax.</h2>
+					</a>
+				</div>
+			</li>
+			<li class="teaser">
+				<div class="teaser-media">
+					<img src="images/800px/digital-performax-1.jpg" aria-hidden="true">					
+				</div>
+				
+				<div class="teaser-link">
+					<a href="/index.php/digital/13-performax">
+						<h2>Performax.</h2>
+					</a>
+				</div>
+			</li>
+			<li class="teaser">
+				<div class="teaser-media">
+					<img src="images/800px/digital-performax-1.jpg" aria-hidden="true">					
+				</div>
+				
+				<div class="teaser-link">
+					<a href="/index.php/digital/13-performax">
+						<h2>Performax.</h2>
+					</a>
+				</div>
+			</li>			
 		</ul>
 	</div>
 </section>	
@@ -118,7 +163,7 @@
 				
 				<div class="teaser-link">
 					<a href="/index.php/perspectives/22-ux-survey-recruitment-brief">
-						<h3>Jetsam | UX survey recruitment brief</h3>
+						<h2>Jetsam | UX survey recruitment brief.</h2>
 					</a>
 				</div>
 			</li>
@@ -130,7 +175,7 @@
 				
 				<div class="teaser-link">
 					<a href="/index.php/perspectives/21-ux-choose-the-best-idea">
-						<h3>Choose the best idea</h3>
+						<h2>Choose the best idea.</h2>
 					</a>
 				</div>
 			</li>
@@ -140,8 +185,8 @@
 
 
 <div id="background" class="background"></div>
-
+<div class="page-frame"></div>
 <link href="https://fonts.googleapis.com/css?family=Raleway:300,700" rel="stylesheet" type="text/css">
-
+<link href="styles/css/index.css" type="text/css" rel="stylesheet">
 </body>
 </html>
