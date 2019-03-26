@@ -1,0 +1,4 @@
+type: pages
+parent: site.find("perspective")
+template: perspective
+empty: No perspectives pieces yet

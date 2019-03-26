@@ -1,0 +1,4 @@
+type: pages
+parent: site.find("life")
+template: life
+empty: No pages here

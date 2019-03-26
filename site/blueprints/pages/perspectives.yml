@@ -1,0 +1,21 @@
+title: Perspective pieces
+
+columns:
+  - width: 1/2
+    sections:
+      drafts:
+        extends: sections/perspectives
+        headline: Drafts
+        status: draft
+
+      unlisted:
+        extends: sections/perspectives
+        headline: In Review
+        status: unlisted
+
+  - width: 1/2
+    sections:
+      listed:
+        extends: sections/perspectives
+        headline: Published
+        status: listed

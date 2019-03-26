@@ -1,0 +1,23 @@
+Title: test perspective blueprint
+
+----
+
+Text: words words words
+
+----
+
+Date: 2019-03-26 02:45
+
+----
+
+Author: 
+
+- dan@2inchesofwater.com
+
+----
+
+Tags: 
+
+----
+
+Gallery: 

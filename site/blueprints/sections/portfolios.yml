@@ -1,0 +1,5 @@
+type: pages
+headline: Portfolio pieces
+parent: site.find("portfolio")
+template: portfolio
+empty: No portfolio pieces yet

@@ -1,0 +1,21 @@
+title: Portfolio pieces
+
+columns:
+  - width: 1/2
+    sections:
+      drafts:
+        extends: sections/portfolios
+        headline: Drafts
+        status: draft
+
+      unlisted:
+        extends: sections/portfolios
+        headline: In Review
+        status: unlisted
+
+  - width: 1/2
+    sections:
+      listed:
+        extends: sections/portfolios
+        headline: Published
+        status: listed
