@@ -37,24 +37,54 @@
 	</article>
 </section>
 
+  <ul class="grid">
+    <?php foreach (page('photography')->children()->listed() as $album): ?>
+    <li>
+      <a href="<?= $album->url() ?>">
+        <figure>
+          <?php if ($cover = $album->cover()): ?>
+			<p>Cover: <br/><?= $cover ?></p>
+          <?php endif ?>
+          <figcaption>
+            <span>
+              <span class="example-name"><?= $album->title() ?></span>
+            </span>
+          </figcaption>
+        </figure>
+      </a>
+    </li>
+    <?php endforeach ?>
+  </ul>
+
+  
+  
 <section id="portfolio" class="row">
 	<div class="teasersCollection">
 		<h1>Portfolio.</h1>
-	
 		<ul class="teasers list-unstyled">
-		
+
+<?php foreach ($site->find('portfolio')->children()->listed() as $child): ?>
+	<h2><?= $child->title()->html() ?></h2>
+	<?php if ($cover = $child->cover()): ?>
+		<?= $cover ?>
+	<?php endif ?>
+
+	<p><?php print_r ($child) ?>
+<?php endforeach ?>
+
+		<?php foreach (page('portfolio')->images() as $image): ?>
 			<li class="teaser">
 				<div class="teaser-media">
-					<img src="images/800px/digital-performax-1.jpg" aria-hidden="true">					
+					<?= $image->crop(600, 800) ?>
 				</div>
-				
 				<div class="teaser-link">
-					<a href="/index.php/digital/13-performax">
-						<h2>Performax.</h2>
-					</a>
+					<a href="<?= $image->link()->or($image->url()) ?>">
+					  <h2>Performax.</h2>
+					</a>		
 				</div>
 			</li>
-						
+		<?php endforeach ?>
+
 		</ul>
 	</div>
 </section>	

@@ -1,7 +1,7 @@
 <?php snippet('header') ?>
 
 <main>
-  <article class="note">
+  <article class="portfolio">
     <header class="note-header intro">
       <h1><?= $page->title() ?></h1>
       <time class="note-date"><?= $page->date()->toDate('d F Y') ?></time>
@@ -10,7 +10,7 @@
       <?php endif ?>
     </header>
 
-    <div class="note-text text">
+    <div class="portfolio-text text">
       <?= $page->text()->kt() ?>
     </div>
   </article>

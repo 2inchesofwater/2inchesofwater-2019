@@ -1,0 +1,20 @@
+Title: Album test
+
+----
+
+Cover: 
+
+- >
+  26173903_936830926465951_4040857890626225492_o.jpg
+
+----
+
+Headline: Costumes album
+
+----
+
+Description: costumes
+
+----
+
+Tags: 
