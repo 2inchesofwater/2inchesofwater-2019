@@ -1,4 +1,4 @@
-title: Portfoliooo
+title: Portfolio
 icon: 🖼
 
 status:
@@ -6,7 +6,7 @@ status:
   listed: true
 
 columns:
-  - width: 2/3
+  - width: 1/2
     sections:
       images:
         type: files
@@ -19,7 +19,7 @@ columns:
         min: 1
         size: small
 
-  - width: 1/3
+  - width: 1/2
     fields:
       cover:
         type: files

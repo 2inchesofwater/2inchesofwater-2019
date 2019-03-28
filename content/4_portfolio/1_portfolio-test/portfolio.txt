@@ -1,11 +1,10 @@
-Title: Album test
+Title: Portfolio test
 
 ----
 
 Cover: 
 
-- >
-  26173903_936830926465951_4040857890626225492_o.jpg
+- 26173903.jpg
 
 ----
 
