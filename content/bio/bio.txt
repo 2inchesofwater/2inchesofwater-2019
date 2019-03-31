@@ -1,0 +1,9 @@
+Title: Bio
+
+----
+
+Headline: UX/UI designer.
+
+----
+
+Text: Dan Gilmore is a UX/UI developer of 10 years’ experience. He’s passionate about building interfaces that put people first. Dan delights in responsive front-ends for websites and applications, and is focused on accessibility, progressive enhancement and scalability.

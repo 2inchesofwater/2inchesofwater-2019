@@ -1,0 +1,22 @@
+title: Bio
+icon: 📝
+preset: page
+
+status:
+  draft: true
+  unlisted:
+    label: Hidden Page
+    text: The page is not listed in the main menu
+  listed:
+    label: Menu Page
+    text: The page is listed in the main menu
+
+pages:
+  template: bio
+
+fields:
+  headline: 
+    type: text
+  text:
+    type: textarea
+    size: huge
