@@ -14,7 +14,7 @@ Background:
 
 ----
 
-Headline: Musta
+Headline: Musta.
 
 ----
 

@@ -8,7 +8,11 @@ Cover:
 
 ----
 
-Headline: Vita Enterprise Solutions
+Background: 
+
+----
+
+Headline: Vita Enterprise Solutions.
 
 ----
 

@@ -1,0 +1,35 @@
+.jumbotron {
+	position: relative;
+	margin-top:0;
+	min-height: 100vh;
+	
+	&::after {
+		.mixin-backgroundImageFade;
+	}
+	
+	.bannergroup {
+		width: 100%;
+	}
+
+	img {
+		.mixin-backgroundImage;
+	}
+	
+	.panel {
+		display: flex;
+		flex-direction: column-reverse; // bespoke for this website
+	}
+	
+	h1 {
+		font-size: @fontSize-xxl;
+		line-height: @lineHeight-xxl;
+		color: @fontColor-feature;
+		margin: 0;
+	}
+	p {
+		font-size: @fontSize-lg;
+		line-height: @lineHeight-lg;
+		font-weight: @fontWeight-base;
+		margin: 0;
+	}
+}

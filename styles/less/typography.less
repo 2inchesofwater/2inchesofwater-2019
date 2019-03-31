@@ -1,0 +1,55 @@
+/* *******************************
+   Typography
+******************************* */
+
+a {
+	color: @fontColor-link;
+	transition: @transition-base;
+	text-decoration: none;
+	&:hover,
+	&:focus {
+		color: @fontColor-link-hover;
+		text-decoration: @link-decoration;
+		transition: @transition-base
+	}
+	&:active {
+		color: @sodaville-complementary-120;
+		transition: @transition-base;
+	}
+}
+
+p {
+	margin: 0;
+	font-size: @fontSize-base;
+	line-height: @lineHeight-base;
+}
+h1 {
+	margin: 0 0 @spacer-sm 0;
+	font-size: @fontSize-xl;
+	line-height: @lineHeight-xl;
+	font-weight: @fontWeight-lg;
+	color: @fontColor-heading;
+}
+h2 {
+	margin: 0 0 0 0;
+	font-size: @fontSize-xl;
+	line-height: @lineHeight-xl;
+	font-weight: @fontWeight-lg;
+	color: @fontColor-heading;
+}
+h3 {
+	margin: 0;
+	font-size: @fontSize-lg;
+	line-height: @lineHeight-lg;
+	font-weight: @fontWeight-base;
+	color: @fontColor-heading;
+}
+ul.list-unstyled {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	li {
+		margin: 0;
+		padding: 0;
+	}
+}

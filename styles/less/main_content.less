@@ -1,0 +1,45 @@
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	margin-top: 0; //widescreen
+	
+	&.main-inner {
+		article {
+			margin-top: 50vh; //widescreen
+			
+			h1 {
+				font-size: @fontSize-xl * 2;
+				line-height: @lineHeight-xl * 2;
+			}
+		}
+		.article-body {
+			column-count: 1;
+		}
+	}
+	&.main-home {
+		.article-body {
+			column-count: 2;
+		}
+	}
+}
+article {
+	width: 100%;
+	max-width: @breakpoint-minimum * 2; //widescreen
+}
+
+.page-background {
+	z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+	img {
+		.mixin-backgroundImage();
+	}
+	&::after {
+		.mixin-backgroundImageFade;
+	}
+}

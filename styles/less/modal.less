@@ -1,0 +1,25 @@
+/* *******************************
+   Modals
+******************************* */
+.modal-screen {
+	display: flex;
+	opacity: 0;
+	transition: @transition-base;
+	transform-origin: top right;
+	&.visible {
+		content:"";
+		display: flex;
+		position: absolute;
+		z-index: 1040; // Follows Bootstrap z-index guides https://getbootstrap.com/docs/4.3/layout/overview/
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		box-sizing: content-box;
+		background: fade(@palette-gray,90);
+		pointer-events: none;
+		opacity: 1;
+		transition: @transition-lg;
+	}
+}

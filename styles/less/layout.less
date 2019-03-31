@@ -1,0 +1,58 @@
+/* *******************************
+   Site layout
+******************************* */
+.site-frame {
+    position: fixed;
+    z-index: 2000;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border: @spacer-base solid #fff;
+	box-sizing: border-box;
+	
+	@media (max-width: @breakpoint-minimum) {
+		display: none;
+	}
+    
+	@media (min-width: @breakpoint-computer) {
+		border-width: @spacer-xl;
+	}
+}
+
+/* *******************************
+   Sections
+******************************* */
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	width:100vw;
+	max-width: 100%;
+	margin-top: @spacer-xl * 10; // widescreen
+	padding: @spacer-base * 3; //widescreen
+	box-sizing: border-box;
+}
+
+section#portfolio {
+	.teasers {
+		grid-template-columns: repeat(1,1fr 1fr);
+	}
+	.teaser:nth-of-type(3){
+		grid-column: span 2; 
+		min-height: @breakpoint-minimum / 2;
+	}
+}
+
+section#perspectives {
+	.teasers {
+		grid-template-columns: repeat(1,3fr 2fr);
+	}
+	.teaser:nth-of-type(3){
+		grid-column: span 2;
+		grid-row: 2;
+	}
+}

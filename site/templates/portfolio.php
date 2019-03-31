@@ -1,19 +1,26 @@
 <?php snippet('header') ?>
 
-<main>
+<main id="main" class="main-inner">
   <article class="portfolio">
-    <header class="note-header intro">
-      <h1><?= $page->title() ?></h1>
-      <time class="note-date"><?= $page->date()->toDate('d F Y') ?></time>
-      <?php if ($page->tags()->isNotEmpty()) : ?>
-      <p class="note-tags tags"><?= $page->tags() ?></p>
-      <?php endif ?>
-    </header>
-
-    <div class="portfolio-text text">
-      <?= $page->text()->kt() ?>
-    </div>
+	<h1><?= $page->headline() ?></h1>
+	<div class="article-wrapper">
+		<?php if ($coverPortfolio = $page->coverPortfolio()): ?>
+			<div class="article-media">
+				<?= $coverPortfolio->resize(800, 800) ?>
+			</div>
+		<?php endif ?>	
+		</div>
+		<div class="article-body">
+			<?= $page->description()->kirbytext() ?>
+		</div>
+	</div>
   </article>
 </main>
+
+	<?php if ($backgroundPortfolio = $page->backgroundPortfolio()): ?>
+		<div class="page-background">
+			<?= $backgroundPortfolio ?>
+		</div>
+	<?php endif ?>		
 
 <?php snippet('footer') ?>

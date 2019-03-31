@@ -21,66 +21,36 @@
 
 <body>
 	<a href="#main" class="sr-only">Skip to main content</a>
-	
-	<header id="header">
-		<h1>
-			<a href="<?= $site->url() ?>" class="logo"><?= $site->title() ?></a>
-		</h1>
-		
-		<nav>
-			<button id="nav-toggle" class="nav-toggle" id="navToggle">Menu</button>
-		</nav>	
-	</header>
-
-	<menu aria-labelledBy="navToggle" aria-expanded="false">
-		<h2 >Contents.</h2>
-		<ul class="list-unstyled">
-			<?php foreach ($site->children()->listed() as $item): ?>
-				<li><?= $item->title()->link() ?></li>
-			<?php endforeach ?>
+	<div class="sitewideHeader">
+		<header id="header">
+			<h1>
+				<a href="<?= $site->url() ?>" class="logo"><?= $site->title() ?></a>
+			</h1>
 			
-			<li class="">
-				<a href="/index.php">Home.</a>
-			</li>
-			<li class="">
-				<a href="#portfolio">Porfolio.</a>
-			</li>
-			<li class="">
-				<a href="#perspectives">Perspectives.</a>
-			</li>
-			<li class="">
-				<a href="#life">Life.</a>
-			</li>
-		</ul>
-	</menu>	
+			<nav>
+				<button id="nav-toggle" class="nav-toggle" id="navToggle">Menu</button>
+			</nav>	
+		</header>
 
-
-
-
-<!-- 
-
-<body class="home " style="">
-
-<!doctype html>
-<html lang="en">
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-  <title><?= $site->title() ?> | <?= $page->title() ?></title>
-
-  <?= css(['assets/css/index.css', '@auto']) ?>
-
-</head>
--->    
-<!--	<header class="header">
-      <a class="logo" href="<?= $site->url() ?>"><?= $site->title() ?></a>
-
-      <nav id="menu" class="menu">
-        <?php foreach ($site->children()->listed() as $item): ?>
-        <?= $item->title()->link() ?>
-        <?php endforeach ?>
-      </nav>
-    </header> -->
-
+		<menu aria-labelledBy="navToggle" aria-expanded="false">
+			<h2 >Contents.</h2>
+			<ul class="list-unstyled">
+				<!-- <?php foreach ($site->children()->listed() as $item): ?>
+					<li><?= $item->title()->link() ?></li>
+				<?php endforeach ?> -->
+				
+				<li class="">
+					<a href="/index.php">Home.</a>
+				</li>
+				<li class="">
+					<a href="#portfolio">Porfolio.</a>
+				</li>
+				<li class="">
+					<a href="#perspectives">Perspectives.</a>
+				</li>
+				<li class="">
+					<a href="#life">Life.</a>
+				</li>
+			</ul>
+		</menu>	
+	</div>

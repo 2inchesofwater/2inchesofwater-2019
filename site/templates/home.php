@@ -2,14 +2,14 @@
 
 <?php snippet('jumbotron') ?>
 
-<section id="main" class="main container">
+<main id="main" class="main main-home container">
 	<article id="home">
 		<h1><?= $site->find('bio')->headline() ?></h1>
 		<div class="article-body">
 			<?= $site->find('bio')->text()->kirbytext() ?>
 		</div>
 	</article>
-</section>
+</main>
 
 <section id="portfolio" class="row">
 	<div class="teasersCollection">
@@ -54,6 +54,5 @@
 		</ul>
 	</div>
 </section>	
-
 
 <?php snippet('footer') ?>

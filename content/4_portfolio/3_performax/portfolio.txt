@@ -2,13 +2,15 @@ Title: Performax
 
 ----
 
-Cover: 
-
-- digital-performax-1.jpg
+Cover: - digital-performax-1.jpg
 
 ----
 
-Headline: Performax
+Background: 
+
+----
+
+Headline: Performax.
 
 ----
 
