@@ -125,6 +125,7 @@ header {
 		width: 100%;
 		height: 25vh;
 		background: linear-gradient(to bottom,fade(@body-bg,100%),fade(@body-bg,0%));
+		pointer-events: none;
 	}
 }
 
@@ -247,7 +248,7 @@ article {
 	.teasers {
 		display: grid;
 		grid-gap: @spacer-sm;
-		grid-template-columns: repeat(1,3fr 2fr);
+		grid-template-columns: repeat(1,1fr 1fr);
 		margin: 0;
 		padding: @spacer-base;
 		background: @palette-white;
@@ -257,7 +258,7 @@ article {
 		display: block;
 		position: relative;
 		overflow: hidden;
-		min-height: @breakpoint-minimum / 2; //widescreen
+		min-height: @breakpoint-minimum / 3; //widescreen
 	}
 	.teaser-media {
 		display: block;
@@ -333,11 +334,11 @@ article {
 
 section#portfolio {
 	.teasers {
-		grid-template-columns: repeat(1,2fr 3fr);
+		grid-template-columns: repeat(1,1fr 1fr);
 	}
-	.teaser:nth-of-type(2){
-		grid-column: 2;
-		grid-row: span 2;
+	.teaser:nth-of-type(3){
+		grid-column: span 2; 
+		min-height: @breakpoint-minimum / 2;
 	}
 }
 

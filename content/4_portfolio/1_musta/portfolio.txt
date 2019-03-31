@@ -8,6 +8,12 @@ Cover:
 
 ----
 
+Background: 
+
+- digital-musta.jpg
+
+----
+
 Headline: Musta
 
 ----

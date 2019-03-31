@@ -1,93 +1,34 @@
 <?php snippet('header') ?>
 
-<section class="container jumbotron">
-	<picture id="">
-		<!-- <source media="(min-width: 1400px )" srcset="images/Upload_2000px/home-japan-1.jpg"> 
-		<source media="(min-width: 1024px )" srcset="images/Upload_2000px/home-japan-1.jpg"> 
-		<source media="(min-width: 768px )" srcset="images/Upload_2000px/home-japan-1.jpg"> 
-		<source media="" srcset="images/Upload_2000px/home-japan-1.jpg"> -->						
-		<img src="images/2000px/home-japan-1.jpg" class="" alt="">						
-		<p class="sr-only">Dan Gilmore.</p>
-	</picture>
-
-	<div class="bannergroup">
-		<div class="banneritem">
-			<div class="panel">
-				<div class="panel-heading panel-display-heading">
-					<h1 class="language-japanese">こんにちは.</h1>
-				</div>				
-				<div class="panel-body">
-					<p>Digital + Life.</p>
-				</div>
-
-			</div>				
-			<div class="clr"></div>
-		</div>
-	</div>
-</section>
-
+<?php snippet('jumbotron') ?>
 
 <section id="main" class="main container">
 	<article id="home">
-		<h1>UX/UI developer.</h1>
-
+		<h1><?= $site->find('bio')->headline() ?></h1>
 		<div class="article-body">
-			<p>Dan Gilmore is a UX/UI developer with 10 years’ experience. He’s passionate about creating interfaces that put people first. Dan builds responsive front-ends for websites and applications, with a special focus on accessibility, progressive enhancement and scalability.</p>
+			<?= $site->find('bio')->text()->kirbytext() ?>
 		</div>
 	</article>
 </section>
 
-  <ul class="grid">
-    <?php foreach (page('photography')->children()->listed() as $album): ?>
-    <li>
-		<?php if ($coverAlbum = $album->cover()): ?>
-			<p>Cover: <br/><?= $coverAlbum->resize(600,600) ?></p>
-		<?php endif ?>     
-		<a href="<?= $album->url() ?>">
-        <figure>
-          <figcaption>
-              <span class="example-name"><?= $album->title() ?></span>
-          </figcaption>
-        </figure>
-      </a>
-	  <p><?php print_r ($album) ?></p>
-    </li>
-    <?php endforeach ?>
-  </ul>
-
-    <ul class="grid">
-<?php foreach (page('portfolio')->children()->listed() as $child): ?>
-	<li><h2><?= $child->headline()->html() ?></h2>
-	
-          <?php if ($cover = $child->cover()): ?>
-			<p>Cover: <br/><?= $cover ?></p>
-          <?php endif ?>
-
-	<p><?php print_r ($child) ?></p>
-	</li>
-<?php endforeach ?>
-</ul>  
-  
 <section id="portfolio" class="row">
 	<div class="teasersCollection">
 		<h1>Portfolio.</h1>
 		<ul class="teasers list-unstyled">
-
-
-
-		<?php foreach (page('portfolio')->images() as $image): ?>
+		<?php foreach (page('portfolio')->children()->listed() as $portfolio): ?>
 			<li class="teaser">
-				<div class="teaser-media">
-					<?= $image->crop(600, 800) ?>
-				</div>
+				<?php if ($coverPortfolio = $portfolio->coverPortfolio()): ?>
+					<div class="teaser-media">
+						<?= $coverPortfolio->resize(800, 800) ?>
+					</div>
+				<?php endif ?>
 				<div class="teaser-link">
-					<a href="<?= $image->link()->or($image->url()) ?>">
-					  <h2>Performax.</h2>
+					<a href="<?= $portfolio->url() ?>">
+					  <h2><?= $portfolio->headline()->html() ?></h2>
 					</a>		
 				</div>
 			</li>
 		<?php endforeach ?>
-
 		</ul>
 	</div>
 </section>	
@@ -113,32 +54,6 @@
 		</ul>
 	</div>
 </section>	
-<!--
-<main>
-  <header class="intro">
-    <h1><?= $site->title() ?></h1>
-  </header>
 
-  <ul class="grid">
-    <?php foreach (page('photography')->children()->listed() as $album): ?>
-    <li>
-      <a href="<?= $album->url() ?>">
-        <figure>
-          <?php if ($cover = $album->cover()): ?>
-          <?= $cover->resize(1024, 1024) ?>
-          <?php endif ?>
-          <figcaption>
-            <span>
-              <span class="example-name"><?= $album->title() ?></span>
-            </span>
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-    <?php endforeach ?>
-  </ul>
-
-</main>
--->
 
 <?php snippet('footer') ?>

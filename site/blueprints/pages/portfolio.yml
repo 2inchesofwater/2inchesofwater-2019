@@ -24,6 +24,9 @@ columns:
       cover:
         type: files
         multiple: false
+      background:
+        type: files
+        multiple: false
       headline:
         type: text
       description:

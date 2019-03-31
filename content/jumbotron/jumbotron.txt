@@ -1,0 +1,15 @@
+Title: Jumbotron
+
+----
+
+Background: 
+
+- home-japan-1.jpg
+
+----
+
+Headline: こんにちは.
+
+----
+
+Text: Digital + Life.
