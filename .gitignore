@@ -38,3 +38,5 @@ Icon
 # ---------------
 /site/config/.license
 
+styles/css/index.css
+*.css
