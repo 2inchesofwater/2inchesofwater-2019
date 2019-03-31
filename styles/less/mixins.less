@@ -18,3 +18,18 @@
 	height: 50vh;
 	background: linear-gradient(to top,fade(@body-bg,100%),fade(@body-bg,0%));
 }
+
+.mixin-galleryCollection() {
+	display: grid;
+	grid-gap: @spacer-sm;
+	// grid-template-columns should be defined on a per-instance basis - see teasers.less and main_content.less, for example
+	margin: 0;
+	padding: @spacer-base;
+	background: @palette-white;	
+}
+
+.mixin-galleryItem() {
+	display: block;
+	position: relative;
+	overflow: hidden;
+}

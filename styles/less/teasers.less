@@ -2,18 +2,12 @@
 	width: 100%;
 	max-width: @breakpoint-minimum * 2; //widescreen
 	.teasers {
-		display: grid;
-		grid-gap: @spacer-sm;
-		grid-template-columns: repeat(1,1fr 1fr);
-		margin: 0;
-		padding: @spacer-base;
-		background: @palette-white;
+		.mixin-galleryCollection;
 	}
 	
 	.teaser {
-		display: block;
-		position: relative;
-		overflow: hidden;
+		.mixin-galleryItem;
+		grid-template-columns: repeat(2,1fr); //widescreen
 		min-height: @breakpoint-minimum / 3; //widescreen
 	}
 	.teaser-media {

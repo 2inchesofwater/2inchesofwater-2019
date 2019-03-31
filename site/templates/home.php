@@ -2,7 +2,7 @@
 
 <?php snippet('jumbotron') ?>
 
-<main id="main" class="main main-home container">
+<main id="main" class="main home">
 	<article id="home">
 		<h1><?= $site->find('bio')->headline() ?></h1>
 		<div class="article-body">
