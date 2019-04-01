@@ -13,12 +13,15 @@
 			<?= $page->description()->kirbytext() ?>
 		</div>
 	</div>
-    <ul class="article-galleryCollection list-unstyled"<?= attr(['data-even' => $gallery->isEven(), 'data-count' => $gallery->count()], ' ') ?>>
-      <?php foreach ($gallery as $image): ?>
+	
+    <ul class="article-galleryCollection list-unstyled">
+	<?php 
+		$pageCover = $page->cover()->toFile(); 
+		$pageBackground = $page->background()->toFile(); 
+	?>
+	<?php foreach ($page->images()->not($pageCover)->not($pageBackground) as $galleryImage): ?>
       <li class="article-galleryItem">
-		  <a href="<?= $image->link()->or($image->url()) ?>">
-			<?= $image ?>
-		  </a>
+			<?= $galleryImage ?>
       </li>
       <?php endforeach ?>
     </ul>

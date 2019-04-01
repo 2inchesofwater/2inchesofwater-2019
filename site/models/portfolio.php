@@ -7,6 +7,9 @@ class PortfolioPage extends Page {
     public function backgroundPortfolio() {
         return $this->content()->get('background')->toFile() ?? $this->image();
     }	
+    public function galleryPortfolio() {
+        return $this->get('gallery');
+    }	
 }
 
 ?>

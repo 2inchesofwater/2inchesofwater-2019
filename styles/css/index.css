@@ -99,7 +99,7 @@ main.home .article-body {
 }
 article {
   width: 100%;
-  max-width: 1120px;
+  max-width: 1200px;
 }
 article.inner {
   margin-top: 50vh;
@@ -290,7 +290,7 @@ section#perspectives .teaser:nth-of-type(3) {
 }
 .jumbotron p {
   font-size: 1.25rem;
-  line-height: 1.3rem;
+  line-height: 1.5rem;
   font-weight: 300;
   margin: 0;
 }
@@ -402,6 +402,10 @@ p {
   font-size: 1rem;
   line-height: 1.15rem;
 }
+article.inner .article-body p {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
 h1 {
   margin: 0 0 0.5rem 0;
   font-size: 1.75rem;
@@ -419,7 +423,7 @@ h2 {
 h3 {
   margin: 0;
   font-size: 1.25rem;
-  line-height: 1.3rem;
+  line-height: 1.5rem;
   font-weight: 300;
   color: #FFFFFF;
 }
