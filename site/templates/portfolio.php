@@ -12,23 +12,24 @@
 		<div class="article-body">
 			<?= $page->description()->kirbytext() ?>
 		</div>
-	</div>
-	
-    <ul class="article-galleryCollection list-unstyled">
+	</div>	
+  </article>
+</main>
+
+<section class="gallery">
+    <ul class="gallery-collection list-unstyled">
 	<?php 
 		$pageCover = $page->cover()->toFile(); 
 		$pageBackground = $page->background()->toFile(); 
 	?>
 	<?php foreach ($page->images()->not($pageCover)->not($pageBackground) as $galleryImage): ?>
-      <li class="article-galleryItem">
+      <li class="gallery-item">
 			<?= $galleryImage ?>
       </li>
       <?php endforeach ?>
     </ul>
+</section>
 	
-  </article>
-</main>
-
 	<?php if ($backgroundPortfolio = $page->backgroundPortfolio()): ?>
 		<div class="page-background">
 			<?= $backgroundPortfolio ?>

@@ -2,11 +2,19 @@ Title: Performax
 
 ----
 
-Cover: - digital-performax-1.jpg
+Cover: 
+
+- digital-performax-1.jpg
 
 ----
 
 Background: 
+
+- digital-performax-2.jpg
+
+----
+
+Gallery: 
 
 ----
 

@@ -2,11 +2,19 @@ Title: Noosa Radiology
 
 ----
 
-Cover: - digital-noosa-2.jpg
+Cover: 
+
+- digital-noosa-2.jpg
 
 ----
 
 Background: 
+
+- digital-noosa-1.jpg
+
+----
+
+Gallery: 
 
 ----
 

@@ -15,8 +15,7 @@ article {
 	
 	&.inner {
 		margin-top: 50vh; //widescreen
-		margin-bottom: 50vh; //widescreen	
-
+		
 		.article-wrapper {
 			display: flex;
 			flex-direction: column;
@@ -55,25 +54,6 @@ article {
 			}
 			p {
 				margin-bottom: @spacer-xl;
-			}
-		}
-		
-		.article-galleryCollection {
-			.mixin-galleryCollection;
-			margin-top: 25vh;
-			
-			.article-galleryItem {
-				.mixin-galleryItem;
-				grid-template-columns: repeat(1,1fr); //widescreen
-				
-				a {}
-				
-				img {
-					display: block;
-					object-fit: contain;
-					width: auto;
-					max-width: 100%;
-				}
 			}
 		}
 	}

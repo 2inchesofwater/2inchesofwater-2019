@@ -2,11 +2,19 @@ Title: Pit Brothers
 
 ----
 
-Cover: - digital-pit_bros-2.jpg
+Cover: 
+
+- digital-pit_bros-2.jpg
 
 ----
 
 Background: 
+
+- digital-pit_bro-1.jpg
+
+----
+
+Gallery: 
 
 ----
 

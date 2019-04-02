@@ -10,6 +10,12 @@ Cover:
 
 Background: 
 
+- digital-ves-2.jpg
+
+----
+
+Gallery: 
+
 ----
 
 Headline: Vita Enterprise Solutions.

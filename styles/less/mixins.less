@@ -19,17 +19,18 @@
 	background: linear-gradient(to top,fade(@body-bg,100%),fade(@body-bg,0%));
 }
 
-.mixin-galleryCollection() {
+.mixin-galleryCollection(@gap:@spacer-sm, @bg:@palette-white,@padding:@spacer-base) {
 	display: grid;
-	grid-gap: @spacer-sm;
+	grid-gap: @gap;
 	// grid-template-columns should be defined on a per-instance basis - see teasers.less and main_content.less, for example
 	margin: 0;
-	padding: @spacer-base;
-	background: @palette-white;	
+	padding: @padding;
+	background: @bg;	
 }
 
-.mixin-galleryItem() {
+.mixin-galleryItem(@padding:0) {
 	display: block;
 	position: relative;
 	overflow: hidden;
+	padding: @padding;
 }
