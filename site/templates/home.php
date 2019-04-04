@@ -3,10 +3,14 @@
 <?php snippet('jumbotron') ?>
 
 <main id="main" class="main home">
-	<article id="home">
-		<h1><?= $site->find('bio')->headline() ?></h1>
-		<div class="article-body">
-			<?= $site->find('bio')->text()->kirbytext() ?>
+	<article class="home">
+		<div class="article-wrapper">
+			<div class="article-title">
+				<h1><?= $site->find('bio')->headline() ?></h1>
+			</div>
+			<div class="article-body">
+				<?= $site->find('bio')->text()->kirbytext() ?>
+			</div>
 		</div>
 	</article>
 </main>

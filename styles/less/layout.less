@@ -16,7 +16,7 @@
 		display: none;
 	}
     
-	@media (min-width: @breakpoint-computer) {
+	@media (min-width: @breakpoint-collapse) {
 		border-width: @spacer-xl;
 	}
 }
@@ -33,17 +33,26 @@ main {
 	position: relative;
 	width:100vw;
 	max-width: 100%;
-	margin-top: @spacer-xl * 10; // widescreen
-	padding: @spacer-base * 3; //widescreen
+	margin-top: 25vh; // widescreen
+	padding: @site-gutter-base; 
 	box-sizing: border-box;
+	
+	@media (max-width: @breakpoint-minimum){
+		margin-top: 20vh; // widescreen
+		padding: @site-gutter-minimum;
+	}
+	@media (min-width: @breakpoint-collapse){
+		margin-top: 35vh; // widescreen
+		padding: @site-gutter-maximum; 
+	}	
 }
 
 section#portfolio {
 	.teasers {
-		grid-template-columns: repeat(1,1fr 1fr);
+		// grid-template-columns: repeat(1,1fr 1fr);
 	}
 	.teaser:nth-of-type(3){
-		grid-column: span 2; 
+		grid-column: ~"span 2";
 		min-height: @breakpoint-minimum / 2;
 	}
 }
@@ -55,5 +64,23 @@ section#perspectives {
 	.teaser:nth-of-type(3){
 		grid-column: span 2;
 		grid-row: 2;
+	}
+}
+
+/* *******************************
+   Page background
+******************************* */
+.page-background {
+	z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 75vh;
+    top: 0;
+    left: 0;
+	img {
+		.mixin-backgroundImage();
+	}
+	&::after {
+		.mixin-backgroundImageFade;
 	}
 }

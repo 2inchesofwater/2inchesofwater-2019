@@ -1,14 +1,26 @@
 .teasersCollection {
 	width: 100%;
-	max-width: @breakpoint-minimum * 2; //widescreen
+	max-width: @breakpoint-widescreen; //widescreen
 	.teasers {
 		.mixin-galleryCollection;
+
+		@media (max-width: @breakpoint-minimum){
+			display: block;
+			padding: @spacer-sm;
+		}	
 	}
 	
 	.teaser {
 		.mixin-galleryItem;
 		grid-template-columns: repeat(2,1fr); //widescreen
 		min-height: @breakpoint-minimum / 3; //widescreen
+		
+		@media (max-width: @breakpoint-minimum){
+			margin-bottom: @spacer-xs;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
 	}
 	.teaser-media {
 		display: block;
@@ -41,6 +53,10 @@
 			width: 100%;
 			padding: @spacer-base;
 			transition: unset;
+			
+			@media (max-width: @breakpoint-minimum){
+				padding: @spacer-sm;
+			}
 			
 			&::before,
 			&::after {

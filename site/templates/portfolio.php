@@ -2,8 +2,10 @@
 
 <main id="main" class="inner">
   <article class="portfolio inner">
-	<h1><?= $page->headline()->or($page->title()) ?></h1>
 	<div class="article-wrapper">
+		<div class="article-title">
+			<h1><?= $page->headline()->or($page->title()) ?></h1>
+		</div>
 		<?php if ($coverPortfolio = $page->coverPortfolio()): ?>
 			<div class="article-media">
 				<?= $coverPortfolio->resize(800, 800) ?>

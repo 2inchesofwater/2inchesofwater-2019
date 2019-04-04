@@ -34,11 +34,6 @@ columns:
         info: "{{ file.dimensions }}"
         multiple: false
         size: small
-      gallery:
-        type: files
-        layout: cards
-        template: image
-        size: small
 
   - width: 1/3    
     fields:

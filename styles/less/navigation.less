@@ -15,7 +15,14 @@ header {
     width: 100vw;
 	max-width: 100%;
     box-sizing: border-box;
-	padding: @spacer-base * 3;
+	padding: @site-gutter-base;
+	
+	@media (max-width: @breakpoint-minimum){
+		padding: @site-gutter-minimum;
+	}
+	@media (min-width: @breakpoint-collapse){
+		padding: @site-gutter-maximum;
+	}
 	
 	opacity: 0;
 	animation: onLoad_header 0.5s ease-in 1s forwards;
@@ -26,9 +33,58 @@ header {
 		margin: 0;
 		a {
 			color: @fontColor-heading;
+			&:hover,
+			&:active,
+			&:focus {
+				color: @fontColor-feature;
+			}
 		}
 	}
-	nav {}
+	
+	nav {
+		width: @spacer-lg;
+		height: @spacer-lg;
+		margin: 0;
+		padding: 0;
+		font-size: 0;
+		line-height: 0;
+		
+		button {
+			position: relative; 
+			background: transparent;
+			margin: 0;
+			padding: 0;
+			color: transparent;
+			border: 0;
+			font-size: 0;
+			line-height: 0;
+			transition: @transition-base !important;
+			cursor: pointer;
+
+			&:before {
+				content: "";
+			}
+			&:after {
+				content: "";
+				display: block;
+				width: @spacer-lg;
+				height: @spacer-lg;
+				background: transparent;
+				border: 0.125rem solid @palette-white;
+				transform: rotate3d(0,0,1,0deg);
+				transition: @transition-sm !important;
+			}
+			&:hover,
+			&:focus {
+				background: @palette-gray;
+				&:after {
+					border-color: @sodaville-gold;
+					transform: rotate3d(0,0,1,45deg);
+					transition: @transition-base !important;
+				}
+			}
+		}
+	}
 	
 	&::after {
 		content: " ";
