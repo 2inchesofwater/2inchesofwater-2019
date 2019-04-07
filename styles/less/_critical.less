@@ -1,12 +1,46 @@
+@import "_variables";
+
 body {
 	position: static;
 	background: @body-bg;
 	margin: 0;
 	font-family: @fontFamily-base;
-	font-size: 16px;  
+	font-size: 16px;
+	font-weight: @fontWeight-base;
 	color: @fontColor-base;
 }
 
 * {
 	box-sizing: border-box;
+}
+
+p {
+	margin: 0;
+	font-size: @fontSize-base;
+	line-height: @lineHeight-base;
+}
+
+a {
+	color: @fontColor-link;
+	transition: @transition-sm !important;
+	text-decoration: none;
+	border-bottom: @button-borderWidth solid transparent;
+	&:hover,
+	&:focus {
+		color: @fontColor-link-hover;
+		text-decoration: @link-decoration;
+		border-bottom-color: @fontColor-link-hover;
+	}
+	&:active {
+		color: @sodaville-complementary-120;
+		border-bottom-color: @sodaville-complementary-80;
+	}
+}
+
+h1 {
+	margin: 0 0 @spacer-sm 0;
+	font-size: @fontSize-xl;
+	line-height: @lineHeight-xl;
+	font-weight: @fontWeight-base;
+	color: @fontColor-heading;
 }

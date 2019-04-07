@@ -7,6 +7,7 @@
 	<!-- <base href="http://2inchesofwater.com/"> -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<title><?= $site->title() ?> | <?= $page->title() ?></title>
+	<?= css(['styles/css/critical.css', '@auto']) ?>
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -15,24 +16,27 @@
 
 	  ga('create', 'UA-22158359-1', 'auto');
 	  ga('send', 'pageview');
-
 	</script>
 </head>
 
 <body>
-	<a href="#main" class="sr-only">Skip to main content</a>
-	<div class="sitewideHeader">
+	<a href="#main" class="sr-only">Skip to main content.</a>
+	<div id="aria-announce" class="sr-assertive sr-only" aria-live="assertive"></div>
+	<div class="sitewideHeader" aria-label="Site header.">
 		<header id="header">
 			<h1>
-				<a href="<?= $site->url() ?>" class="logo"><?= $site->title() ?></a>
+				<a href="<?= $site->url() ?>" class="logo" aria-label="Returns to home page"><?= $site->title() ?></a>
 			</h1>
 			
 			<nav>
-				<button id="nav-toggle" class="nav-toggle" id="navToggle">Menu</button>
+				<button id="toggleMenu" class="nav-toggle" onclick="toggleMenu('menu')">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+				Menu
+				</button>
 			</nav>	
 		</header>
 
-		<menu aria-labelledBy="navToggle" aria-expanded="false">
+		<menu id="menu" aria-labelledBy="toggleMenu" aria-expanded="false">
 			<h2 >Contents.</h2>
 			<ul class="list-unstyled">
 				<!-- <?php foreach ($site->children()->listed() as $item): ?>

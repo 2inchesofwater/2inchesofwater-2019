@@ -20,6 +20,8 @@ fields:
     multiple: false
   headline: 
     type: text
+  kicker: 
+    type: text    
   text:
     type: textarea
     size: huge

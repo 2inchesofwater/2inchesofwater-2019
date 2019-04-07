@@ -6,25 +6,19 @@
 	&::after {
 		.mixin-backgroundImageFade;
 	}
-	
-	.bannergroup {
-		width: 100%;
-	}
 
 	img {
 		.mixin-backgroundImage;
 	}
-	
 	.panel {
-		display: flex;
-		flex-direction: column-reverse; // bespoke for this website
+		width: 100%;
 	}
-	
-	h1 {
-		font-size: @fontSize-xxl;
-		line-height: @lineHeight-xxl;
+	.panel-title {
+		display: flex;
+		flex-direction: column; // bespoke for this website
+	}
+	h2 {
 		color: @fontColor-feature;
-		margin: 0;
 	}
 	p {
 		font-size: @fontSize-lg;

@@ -2,7 +2,13 @@
 
 class PortfolioPage extends Page {
     public function coverPortfolio() {
-        return $this->content()->get('cover')->toFile() ?? $this->image();
+		$returnLazyImage = null;
+		if ($lazyImage = $this->content()->get('cover')->toFile()) {
+			$returnLazyImage = "<img src='' alt='". $lazyImage->alt() ."' class='lazy' data-src='". $lazyImage->url() ."' data-srcset=''>";
+		} else {
+			$returnLazyImage = $this->image();
+		}
+        return $returnLazyImage;
     }
     public function backgroundPortfolio() {
         return $this->content()->get('background')->toFile() ?? $this->image();

@@ -2,52 +2,25 @@
    Typography
 ******************************* */
 
-a {
-	color: @fontColor-link;
-	transition: @transition-base;
-	text-decoration: none;
-	&:hover,
-	&:focus {
-		color: @fontColor-link-hover;
-		text-decoration: @link-decoration;
-		transition: @transition-base
-	}
-	&:active {
-		color: @sodaville-complementary-120;
-		transition: @transition-base;
-	}
-}
-
-p {
-	margin: 0;
-	font-size: @fontSize-base;
-	line-height: @lineHeight-base;
-}
-
-h1 {
-	margin: 0 0 @spacer-sm 0;
-	font-size: @fontSize-xl;
-	line-height: @lineHeight-xl;
-	font-weight: @fontWeight-lg;
-	color: @fontColor-heading;
-}
+.jumbotron .panel-title h1,
+.jumbotron .panel-title h2,
 article .article-title h1 {
-	font-size: @fontSize-xl * 2;
-	line-height: @lineHeight-xl * 2;
-	margin-bottom: 0;
+	font-size: @fontSize-xl * 1.5;
+	line-height: @lineHeight-xl * 1.5;
+	margin-bottom: @spacer-xs;
 	
 	@media (max-width: @breakpoint-minimum) {
-		font-size: @fontSize-xl * 1.5;
-		line-height: @lineHeight-xl * 1.5;
-		margin-bottom: @spacer-base;
+		font-size: @fontSize-xl * 1.25;
+		line-height: @lineHeight-xl * 1.25;
+		margin-bottom: @spacer-xs;
 	}
 }
 
 h2 {
-	margin: 0 0 0 0;
+	margin: 0 0 @spacer-xs 0;
 	font-size: @fontSize-xl;
 	line-height: @lineHeight-xl;
-	font-weight: @fontWeight-lg;
+	font-weight: @fontWeight-base;
 	color: @fontColor-heading;
 }
 h3 {

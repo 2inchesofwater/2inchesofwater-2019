@@ -1,14 +1,3 @@
-body {
-  position: static;
-  background: #2d2928;
-  margin: 0;
-  font-family: 'Raleway', helvetica, arial, sans-serif;
-  font-size: 16px;
-  color: #ebebeb;
-}
-* {
-  box-sizing: border-box;
-}
 /* **********************************
 Animation
 ********************************** */
@@ -57,11 +46,6 @@ header h1 {
 header h1 a {
   color: #FFFFFF;
 }
-header h1 a:hover,
-header h1 a:active,
-header h1 a:focus {
-  color: #ffd833;
-}
 header nav {
   width: 1.75rem;
   height: 1.75rem;
@@ -70,7 +54,7 @@ header nav {
   font-size: 0;
   line-height: 0;
 }
-header nav button {
+header button {
   position: relative;
   background: transparent;
   margin: 0;
@@ -79,42 +63,29 @@ header nav button {
   border: 0;
   font-size: 0;
   line-height: 0;
-  transition: all 0.25s ease-in-out !important;
+  transition: all 0.3s ease-in !important;
   cursor: pointer;
 }
-header nav button:before {
-  content: "";
-}
-header nav button:after {
+header button:after {
   content: "";
   display: block;
   width: 1.75rem;
   height: 1.75rem;
-  background: transparent;
-  border: 0.125rem solid #FFFFFF;
-  transform: rotate3d(0, 0, 1, 0deg);
-  transition: all 0.1s ease-in-out !important;
+  border: 0.05rem solid transparent;
+  transition: all 0.1s ease-in !important;
 }
-header nav button:hover,
-header nav button:focus {
-  background: #2d2928;
+header button:hover:after,
+header button:focus:after {
+  border-bottom-color: #ffd833;
+  transition: all 0.3s ease-in !important;
 }
-header nav button:hover:after,
-header nav button:focus:after {
-  border-color: #ffd833;
-  transform: rotate3d(0, 0, 1, 45deg);
-  transition: all 0.25s ease-in-out !important;
-}
-header::after {
-  content: " ";
+header button svg {
   position: absolute;
-  z-index: -1;
-  top: -1px;
-  left: 0;
-  width: 100%;
-  height: 25vh;
-  background: linear-gradient(to bottom, #2d2928, rgba(45, 41, 40, 0));
-  pointer-events: none;
+  top: calc((1.75rem - 1.5rem) - (0.05rem / 2));
+  right: calc((1.75rem - 1.5rem) - (0.05rem / 2));
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: #ebebeb;
 }
 menu {
   display: flex;
@@ -123,31 +94,50 @@ menu {
   justify-content: center;
   position: absolute;
   top: 0;
-  left: 0;
+  right: -560px;
+  z-index: -1;
   width: 100%;
-  height: 100%;
-  box-sizing: border-box;
+  max-width: 560px;
+  min-height: 100vh;
   margin: 0;
-  padding: 0 ;
-  perspective: 10rem;
-  transform: rotate3d(0, 1, 0, 90deg);
-  transition: transform 0.1s ease-in-out;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in !important;
 }
 menu[aria-expanded="true"] {
-  transform: rotate3d(0, 1, 0, 0deg);
-  transition: transform 0.3s ease-in-out;
+  right: 0;
 }
-menu > h2 {
-  margin: 0;
-  min-width: 560px;
+menu {
+  background: #2d2928;
+  padding: 1.5rem;
+}
+@media (min-width: 560px) {
+  menu {
+    border-left: 0.5rem solid #FFFFFF;
+  }
+}
+menu h2 {
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 560px) {
+  menu h2 {
+    margin-right: 1.5rem;
+  }
 }
 menu > ul.list-unstyled {
-  min-width: 560px;
+  text-align: center;
 }
 menu > ul.list-unstyled li {
-  margin: 1.5rem 0 0 0;
-  padding: 0.75rem 0;
-  font-size: 1.75rem;
+  margin: 0 0 1.5rem 0;
+  padding: 0.75rem 0 0.75rem 0;
+  font-size: 1.3rem;
+}
+@media (min-width: 560px) {
+  menu > ul.list-unstyled li {
+    margin-right: 1.5rem;
+  }
+}
+menu > ul.list-unstyled li:last-of-type {
+  margin-bottom: 0;
 }
 main.inner {
   margin-top: 0;
@@ -309,6 +299,16 @@ article.home .article-body {
     border-width: 2rem;
   }
 }
+.site-haze {
+  position: fixed;
+  z-index: 1000;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 25vh;
+  background: linear-gradient(to bottom, #2d2928, rgba(45, 41, 40, 0));
+  pointer-events: none;
+}
 /* *******************************
    Sections
 ******************************* */
@@ -394,9 +394,6 @@ section#perspectives .teaser:nth-of-type(3) {
   height: 50vh;
   background: linear-gradient(to top, #2d2928, rgba(45, 41, 40, 0));
 }
-.jumbotron .bannergroup {
-  width: 100%;
-}
 .jumbotron img {
   display: block;
   position: absolute;
@@ -408,20 +405,32 @@ section#perspectives .teaser:nth-of-type(3) {
   object-fit: cover;
 }
 .jumbotron .panel {
-  display: flex;
-  flex-direction: column-reverse;
+  width: 100%;
 }
-.jumbotron h1 {
-  font-size: 6rem;
-  line-height: 6rem;
+.jumbotron .panel-title {
+  display: flex;
+  flex-direction: column;
+}
+.jumbotron h2 {
   color: #ffd833;
-  margin: 0;
 }
 .jumbotron p {
   font-size: 1.3rem;
   line-height: 1.75rem;
-  font-weight: 300;
+  font-weight: 200;
   margin: 0;
+}
+footer {
+  background: #FFFFFF;
+}
+footer section {
+  padding-top: 5vh;
+  padding-bottom: 10vh;
+}
+footer p {
+  font-size: 0.75rem;
+  line-height: 0.8rem;
+  color: #2d2928;
 }
 .teasersCollection {
   width: 100%;
@@ -467,6 +476,7 @@ section#perspectives .teaser:nth-of-type(3) {
 }
 .teasersCollection .teaser-media img {
   object-fit: cover;
+  object-position: top center;
   width: 100%;
   height: 100%;
 }
@@ -597,57 +607,34 @@ section.gallery {
 /* *******************************
    Typography
 ******************************* */
-a {
-  color: #ffd833;
-  transition: all 0.25s ease-in-out;
-  text-decoration: none;
-}
-a:hover,
-a:focus {
-  color: #ffe05c;
-  text-decoration: underline;
-  transition: all 0.25s ease-in-out;
-}
-a:active {
-  color: #ae7b97;
-  transition: all 0.25s ease-in-out;
-}
-p {
-  margin: 0;
-  font-size: 1.1rem;
-  line-height: 1.5rem;
-}
-h1 {
-  margin: 0 0 0.75rem 0;
-  font-size: 1.75rem;
-  line-height: 2rem;
-  font-weight: 700;
-  color: #FFFFFF;
-}
+.jumbotron .panel-title h1,
+.jumbotron .panel-title h2,
 article .article-title h1 {
-  font-size: 3.5rem;
-  line-height: 4rem;
-  margin-bottom: 0;
+  font-size: 2.625rem;
+  line-height: 3rem;
+  margin-bottom: 0.5rem;
 }
 @media (max-width: 560px) {
+  .jumbotron .panel-title h1,
+  .jumbotron .panel-title h2,
   article .article-title h1 {
-    font-size: 2.625rem;
-    line-height: 3rem;
-    margin-bottom: 1.5rem;
+    font-size: 2.1875rem;
+    line-height: 2.5rem;
+    margin-bottom: 0.5rem;
   }
 }
 h2 {
-  margin: 0 0 0 0;
+  margin: 0 0 0.5rem 0;
   font-size: 1.75rem;
   line-height: 2rem;
-  font-weight: 700;
+  font-weight: 200;
   color: #FFFFFF;
 }
 h3 {
   margin: 0;
   font-size: 1.3rem;
   line-height: 1.75rem;
-  font-weight: 300;
+  font-weight: 200;
   color: #FFFFFF;
 }
 ul.list-unstyled {
@@ -665,7 +652,7 @@ ul.list-unstyled li {
 .modal-screen {
   display: flex;
   opacity: 0;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.3s ease-in;
   transform-origin: top right;
 }
 .modal-screen.visible {
@@ -682,7 +669,7 @@ ul.list-unstyled li {
   background: rgba(45, 41, 40, 0.9);
   pointer-events: none;
   opacity: 1;
-  transition: all 0.75s ease-in-out;
+  transition: all 0.75s ease-in;
 }
 /* *******************************
    Accessibility

@@ -8,8 +8,12 @@ Background:
 
 ----
 
-Headline: こんにちは.
+Headline: UX and interaction designer.
 
 ----
 
-Text: Digital + Life.
+Kicker: Humilitarian.
+
+----
+
+Text: 
