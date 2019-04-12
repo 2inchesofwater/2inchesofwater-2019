@@ -39,9 +39,8 @@
 		<menu id="menu" aria-labelledBy="toggleMenu" aria-expanded="false">
 			<h2 >Contents.</h2>
 			<ul class="list-unstyled">
-				<?php foreach ($site->children()->listed() as $item): ?>
-					<li><?= $item->title()->link() ?></li>
-				<?php endforeach ?>
+				<li><a href="<?= $site->url() ?>" aria-role="navigation">Home.</a></li>
+				<li><a href="<?= $site->url() ?>#portfolio" aria-role="navigation">Portfolio.</a></li>
 			</ul>
 		</menu>	
 	</div>
