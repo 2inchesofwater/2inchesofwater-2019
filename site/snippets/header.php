@@ -4,7 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
 	<meta name="apple-mobile-web-app-capable" content="YES">
 
-	<!-- <base href="http://2inchesofwater.com/"> -->
+	<base href="https://kunghur.com/2inchesofwater-2019/"> -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<title><?= $site->title() ?> | <?= $page->title() ?></title>
 	<?= css(['styles/css/critical.css', '@auto']) ?>
@@ -39,22 +39,9 @@
 		<menu id="menu" aria-labelledBy="toggleMenu" aria-expanded="false">
 			<h2 >Contents.</h2>
 			<ul class="list-unstyled">
-				<!-- <?php foreach ($site->children()->listed() as $item): ?>
+				<?php foreach ($site->children()->listed() as $item): ?>
 					<li><?= $item->title()->link() ?></li>
-				<?php endforeach ?> -->
-				
-				<li class="">
-					<a href="/index.php">Home.</a>
-				</li>
-				<li class="">
-					<a href="#portfolio">Porfolio.</a>
-				</li>
-				<li class="">
-					<a href="#perspectives">Perspectives.</a>
-				</li>
-				<li class="">
-					<a href="#life">Life.</a>
-				</li>
+				<?php endforeach ?>
 			</ul>
 		</menu>	
 	</div>

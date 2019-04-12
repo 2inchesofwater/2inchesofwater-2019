@@ -8,7 +8,7 @@
 		</div>
 		<?php if ($coverPortfolio = $page->coverPortfolio()): ?>
 			<div class="article-media">
-				<?= $coverPortfolio->resize(800, 800) ?>
+				<?= $coverPortfolio ?>
 			</div>
 		<?php endif ?>	
 		<div class="article-body">

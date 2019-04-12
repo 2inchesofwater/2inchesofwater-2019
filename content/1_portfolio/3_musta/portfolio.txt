@@ -1,0 +1,45 @@
+Title: Musta
+
+----
+
+Cover: 
+
+- digital-musta-2.jpg
+
+----
+
+Background: 
+
+- digital-musta.jpg
+
+----
+
+Gallery: 
+
+- musta-001_open-phone_v1.jpg
+- musta-002_login-phone_v1.jpg
+- musta-110_participant_home-phone_v1.jpg
+- >
+  musta-111_participant_search-phone_v1.jpg
+- >
+  musta-115_participant_calendar-phone_v1.jpg
+
+----
+
+Headline: Musta.
+
+----
+
+Description: 
+
+Musta connects fitness trainers with new leads. 
+
+Musta is a unique fitness trainer payment and organisation system, a potential lead generator, and business companion for fitness training professionals.
+
+The site is built on Magento, with hand-crafted mobile-first SASS CSS styling on a custom framework derived from Bootstrap.
+
+UX and UI concepts by Dan Gilmore for iFactory.
+
+----
+
+Tags: 

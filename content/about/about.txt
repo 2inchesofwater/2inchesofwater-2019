@@ -1,0 +1,41 @@
+Title: Contact
+
+----
+
+Text: Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+
+----
+
+Address: 
+
+----
+
+Email: 
+
+----
+
+Phone: +61404084893
+
+----
+
+Social: 
+
+- 
+  platform: Twitter
+  url: https://twitter.com/2inchesofwater
+- 
+  platform: LinkedIn
+  url: >
+    https://www.linkedin.com/in/dangilmoreaustralia/
+- 
+  platform: AngelList
+  url: https://angel.co/dan-gilmore-2
+
+----
+
+Contact: 
+
+Kirby Magazine Inc.
+Sesamestreet 1
+Gotham City
+USA
