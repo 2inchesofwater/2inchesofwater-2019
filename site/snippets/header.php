@@ -36,7 +36,7 @@
 			</nav>	
 		</header>
 
-		<menu id="menu" aria-labelledBy="toggleMenu" aria-expanded="false">
+		<menu id="menu" aria-labelledBy="toggleMenu" aria-expanded="false" aria-hidden="true">
 			<h2 >Contents.</h2>
 			<ul class="list-unstyled">
 				<li><a href="<?= $site->url() ?>" aria-role="navigation">Home.</a></li>

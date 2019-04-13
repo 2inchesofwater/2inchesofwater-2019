@@ -84,10 +84,12 @@
 			&:active {
 				text-decoration: none;
 			}
-			&:hover::before{
+			&:hover::before,
+			&:focus::before{
 				opacity: 1;
 			}
-			&:hover::after{
+			&:hover::after,
+			&:focus::after{
 				opacity: 0;
 			}
 			h2, 

@@ -527,10 +527,12 @@ footer p {
 .teasersCollection .teaser-link a:active {
   text-decoration: none;
 }
-.teasersCollection .teaser-link a:hover::before {
+.teasersCollection .teaser-link a:hover::before,
+.teasersCollection .teaser-link a:focus::before {
   opacity: 1;
 }
-.teasersCollection .teaser-link a:hover::after {
+.teasersCollection .teaser-link a:hover::after,
+.teasersCollection .teaser-link a:focus::after {
   opacity: 0;
 }
 .teasersCollection .teaser-link a h2,
@@ -700,4 +702,18 @@ ul.list-unstyled li {
   overflow: visible !important;
   width: auto !important;
   white-space: normal !important;
+}
+[aria-hidden="true"] {
+  display: none;
+}
+h1:focus,
+h2:focus,
+h3:focus,
+h4:focus,
+h5:focus,
+h6:focus,
+a:focus,
+button:focus {
+  outline: 2px solid #ffd833;
+  outline-offset: 2px;
 }
