@@ -14,6 +14,24 @@ Background:
 
 ----
 
+Headline: Musta.
+
+----
+
+Description: 
+
+Musta was proposed as a mobile app fitness trainer payment and organisation system, a potential lead generator, and business companion for fitness training professionals.
+
+The app's UX design hypothesised that a key pain point for freelance fitness trainers was negotiating their available times with individual (prospective) clients. We focused on streamlining flows for a trainer to manage their calendar, and a prospective client to pair with a suitable trainer.
+
+UX/UI design by Dan Gilmore for iFactory.
+
+----
+
+Tags: 
+
+----
+
 Gallery: 
 
 - musta-001_open-phone_v1.jpg
@@ -23,23 +41,3 @@ Gallery:
   musta-111_participant_search-phone_v1.jpg
 - >
   musta-115_participant_calendar-phone_v1.jpg
-
-----
-
-Headline: Musta.
-
-----
-
-Description: 
-
-Musta connects fitness trainers with new leads. 
-
-Musta is a unique fitness trainer payment and organisation system, a potential lead generator, and business companion for fitness training professionals.
-
-The site is built on Magento, with hand-crafted mobile-first SASS CSS styling on a custom framework derived from Bootstrap.
-
-UX and UI concepts by Dan Gilmore for iFactory.
-
-----
-
-Tags: 

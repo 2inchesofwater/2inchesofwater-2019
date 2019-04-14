@@ -14,10 +14,6 @@ Background:
 
 ----
 
-Gallery: 
-
-----
-
 Headline: Pit Brothers.
 
 ----
@@ -26,10 +22,14 @@ Description:
 
 Startup barbecuing equipment business Pit Brothers plans to carve a sizeable portion of the boutique slow-cooked meats market with a range of ingredients and specialised cooking gear.
 
-Startup barbecuing equipment business Pit Brothers plans to carve a sizeable portion of the boutique slow-cooked meats market with a range of ingredients and specialised cooking gear.
+The brief emphasised a masculine energy wrapped around a craftsman mindset. We proposed features to support customers sharing their personal takes on the site's recipes.  
 
-Site design by Dan Gilmore for iFactory.
+UX/UI design by Dan Gilmore for iFactory.
 
 ----
 
 Tags: 
+
+----
+
+Gallery: 

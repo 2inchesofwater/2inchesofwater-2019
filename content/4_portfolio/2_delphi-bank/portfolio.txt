@@ -20,10 +20,12 @@ Headline: Delphi Bank.
 
 Description: 
 
-Text text text.
+Delphi Bank is a specialised brand under Australia's Bendigo Bank. Its history is entwined with European communities and business owners. 
 
-Cover photo by _____ on Unsplash.
-Background photo by _____
+Data research revealed several extraordinary banking patterns among its customers, notably very high numbers of accounts per person. Armed with this insight, our team designed UI features to support quickly navigating long lists of accounts. 
+
+UX/UI design by Dan Gilmore for TSW.
+Background photo by Jonathan Francisca on Unsplash.
 
 ----
 

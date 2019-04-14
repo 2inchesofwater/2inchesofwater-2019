@@ -6,4 +6,8 @@ Headline: UX/UI designer.
 
 ----
 
-Text: Dan Gilmore is a UX/UI developer of 10 years’ experience. He’s passionate about building interfaces that put people first. Dan delights in responsive front-ends for websites and applications, and is focused on accessibility, progressive enhancement and scalability.
+Text: 
+
+Dan Gilmore helps create interfaces that put people first. His design methodology is simple: Research empowers insight, and insight empowers empathy. That's the heart of humilitarian design - empathy for the needs of all people. We must support a person's physical, emotional, and mental abilities. 
+ 
+The translation of user experience (UX) design into code is important to Dan. He is passionate about accessibility, semantic HTML, and progressive enhancement. It boils down to one simple outcome. When we support all people who use our digital products, we make life better for all people.

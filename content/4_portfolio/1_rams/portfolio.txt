@@ -20,10 +20,16 @@ Headline: RAMS.
 
 Description: 
 
-RAMS is a subsidiary of the Westpac Group, offering a range of flexible and affordable home loans since 1995. Our team delivered a suite of
+RAMS is a subsidiary of the Westpac Group, offering a range of flexible and affordable home loans since 1995. 
 
-Cover photo by Colin on Unsplash
-Background
+Our team introduced a key innovation for this client. We added responsive design to a customers' list of transactions.
+
+We designed a standards-compliant HTML table which can hinge between a traditional rows-based layout on large screens, but collapse to a stacked layout on handheld devices. 
+
+We believe this capability is unique within the Australian online banking industry. It demonstrates our commitment to supporting all customers regardless of how they interact with our product. 
+
+UX and UI design by Dan Gilmore for TSW.
+Cover photo by Colin on Unsplash.
 
 ----
 
