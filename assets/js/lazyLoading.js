@@ -33,4 +33,5 @@ document.addEventListener("DOMContentLoaded", function() {
   document.addEventListener("scroll", lazyLoad);
   window.addEventListener("resize", lazyLoad);
   window.addEventListener("orientationchange", lazyLoad);
-});
+  window.addEventListener('DOMContentLoaded', lazyLoad);
+  });

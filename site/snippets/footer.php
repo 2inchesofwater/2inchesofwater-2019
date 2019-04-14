@@ -7,6 +7,7 @@
 <div class="site-haze"></div> 
 <link href="https://fonts.googleapis.com/css?family=Raleway:200,500" rel="stylesheet" type="text/css">
 <?= css(['styles/css/index.css', '@auto']) ?>
+<script type="text/javascript" src="<?= $site->url() ?>/assets/js/intersection-observer.js"></script>
 <script type="text/javascript" src="<?= $site->url() ?>/assets/js/toggleMenu.js"></script>
 <script type="text/javascript" src="<?= $site->url() ?>/assets/js/lazyLoading.js"></script>
 </body>
