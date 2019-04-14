@@ -14,10 +14,6 @@ Background:
 
 ----
 
-Gallery: 
-
-----
-
 Headline: Performax.
 
 ----
@@ -30,8 +26,12 @@ In the RHD conversion business since 1989, Performax International is the larges
 
 They wanted their new site to be bold, confident, and highly visual. Their target market is primarily wealthy farmers who demand the best, most powerful farm vehicles available. Importing and converting a pickup from the USA is a small price to pay for a machine that will keep up with their workload.
 
-Site UX and design by Dan Gilmore for iFactory.
+UX/UI design by Dan Gilmore for iFactory.
 
 ----
 
 Tags: 
+
+----
+
+Gallery: 

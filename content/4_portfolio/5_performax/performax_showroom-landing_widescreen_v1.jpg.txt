@@ -2,8 +2,24 @@ Caption:
 
 ----
 
+Alt: Performax - Showroom page layout - Sized for widescreen devices
+
+----
+
+Photographer: 
+
+----
+
+License: 
+
+----
+
+Link: 
+
+----
+
 Template: image
 
 ----
 
-Sort: 4
+Sort: 5

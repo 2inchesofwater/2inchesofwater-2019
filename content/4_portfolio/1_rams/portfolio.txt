@@ -29,7 +29,7 @@ We designed a standards-compliant HTML table which can hinge between a tradition
 We believe this capability is unique within the Australian online banking industry. It demonstrates our commitment to supporting all customers regardless of how they interact with our product. 
 
 UX and UI design by Dan Gilmore for TSW.
-Cover photo by Colin on Unsplash.
+Background photo by 'Colin' on Unsplash.
 
 ----
 
