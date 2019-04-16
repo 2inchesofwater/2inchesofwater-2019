@@ -37,5 +37,7 @@
 	</div>
 </section>	
 
+<?php snippet('notes') ?>
+
 
 <?php snippet('footer') ?>
