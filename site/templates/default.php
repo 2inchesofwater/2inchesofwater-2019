@@ -1,12 +1,12 @@
 <?php snippet('header') ?>
 
-<main>
-  <header class="intro">
-    <h1><?= $page->title() ?></h1>
-  </header>
-  <div class="text">
-    <?= $page->text()->kt() ?>
-  </div>
-</main>
+<section id="main" aria-labelledBy="article-title">
+	<div class="article-wrapper">
+		<h1 class="article-title"><?= $page->title() ?></h1>
+		<div class="article-body">
+			<?= $page->text()->kt() ?>
+		</div>
+	</div>
+</section>
 
 <?php snippet('footer') ?>

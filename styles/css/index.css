@@ -11,10 +11,13 @@ Animation
 }
 footer {
   background: #FFFFFF;
+  position: absolute;
+  top: 100%;
 }
 footer section {
   padding-top: 5vh;
   padding-bottom: 10vh;
+  margin-top: 0;
 }
 footer p {
   font-size: 0.75rem;
@@ -190,6 +193,9 @@ main {
     margin-top: 35vh;
     padding: 4rem;
   }
+}
+body > section:last-of-type {
+  margin-bottom: 25vh;
 }
 section#portfolio .teaser:nth-of-type(3) {
   grid-column: span 2;
@@ -452,6 +458,7 @@ article.home .article-body {
   align-items: center;
   position: fixed;
   z-index: 1050;
+  top: 0;
 }
 header {
   display: flex;

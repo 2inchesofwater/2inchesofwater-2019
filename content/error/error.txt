@@ -6,4 +6,4 @@ Intro: The page could not be found.
 
 ----
 
-Text: Well, stuff can go wrong sometimes and maybe you mistyped a URL, tapped/clicked on a broken link or your computer just wants to drive you nuts. Anyway … keep calm and take a look at our beautiful (link: / text: homepage) instead.
+Text: Sometimes links get broken. It appears you've found one. You could start from the (link: / text: 2 Inches of Water home page) instead.
