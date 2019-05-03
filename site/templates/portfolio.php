@@ -19,14 +19,16 @@
 </main>
 
 <section class="gallery">
-    <ul class="gallery-collection list-unstyled">
+    <ul class="gallery-collection list-unstyled" id="gallery-collection">
 	<?php 
 		$pageCover = $page->cover()->toFile(); 
 		$pageBackground = $page->background()->toFile(); 
 	?>
 	<?php foreach ($page->images()->not($pageCover)->not($pageBackground) as $galleryImage): ?>
-      <li class="gallery-item">
+      <li class="gallery-item" data-src="<?= $galleryImage->url() ?>">
+		<a href="<?= $galleryImage->url() ?>">
 			<?= $galleryImage ?>
+		</a>
       </li>
       <?php endforeach ?>
     </ul>
@@ -37,5 +39,9 @@
 			<?= $backgroundPortfolio ?>
 		</div>
 	<?php endif ?>		
-
+	<script src="../assets/js/lightgallery.js"></script>
+	<script src="../assets/js/lg-thumbnail.min.js"></script>
+	<script src="../assets/js/lg-video.min.js"></script>
+	<script src="../assets/js/lg-fullscreen.min.js"></script>
+	<script>lightGallery(document.getElementById('gallery-collection'));</script>
 <?php snippet('footer') ?>

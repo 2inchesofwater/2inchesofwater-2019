@@ -4,7 +4,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
 	<meta name="apple-mobile-web-app-capable" content="YES">
 
-	<base href="https://kunghur.com/2inchesofwater-2019/">
+	<!--<base href="https://kunghur.com/2inchesofwater-2019/"> -->
+	<base href="">
 	<link rel="shortcut icon" href="<?= $site->url() ?>/favicon.ico">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<title><?= $site->title() ?> | <?= $page->title() ?></title>
