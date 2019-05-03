@@ -11,7 +11,7 @@ Animation
 }
 footer {
   background: #FFFFFF;
-  position: absolute;
+  position: static;
   top: 100%;
 }
 footer section {
