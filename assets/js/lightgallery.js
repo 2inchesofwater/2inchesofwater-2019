@@ -278,8 +278,8 @@
         showAfterLoad: true,
         selector: '',
         selectWithin: '',
-        nextHtml: '',
-        prevHtml: '',
+        nextHtml: 'Next image',
+        prevHtml: 'Previous image',
 
         // 0, 1
         index: false,
@@ -494,14 +494,14 @@
 
         // Create controlls
         if (this.s.controls && this.items.length > 1) {
-            controls = '<div class="lg-actions">' + '<div class="lg-prev lg-icon">' + this.s.prevHtml + '</div>' + '<div class="lg-next lg-icon">' + this.s.nextHtml + '</div>' + '</div>';
+            controls = '<div class="lg-actions">' + '<button class="lg-prev lg-icon"><span class="sr-hidden"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span><span class="sr-only">' + this.s.prevHtml + '</span></button>' + '<button class="lg-next lg-icon"><span class="sr-hidden"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span><span class="sr-only">' + this.s.nextHtml + '</span></button>' + '</div>';
         }
 
         if (this.s.appendSubHtmlTo === '.lg-sub-html') {
             subHtmlCont = '<div class="lg-sub-html"></div>';
         }
 
-        template = '<div class="lg-outer ' + this.s.addClass + ' ' + this.s.startClass + '">' + '<div class="lg" style="width:' + this.s.width + '; height:' + this.s.height + '">' + '<div class="lg-inner">' + list + '</div>' + '<div class="lg-toolbar group">' + '<span class="lg-close lg-icon"></span>' + '</div>' + controls + subHtmlCont + '</div>' + '</div>';
+        template = '<div class="lg-outer ' + this.s.addClass + ' ' + this.s.startClass + '">' + '<div class="lg" style="width:' + this.s.width + '; height:' + this.s.height + '">' + '<div class="lg-inner">' + list + '</div>' + '<div class="lg-toolbar group">' + '<button class="lg-close lg-icon"><span class="sr-hidden"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span><span class="sr-only">Close</span></button>' + '</div>' + controls + subHtmlCont + '</div>' + '</div>';
 
         document.body.insertAdjacentHTML('beforeend', template);
         this.outer = document.querySelector('.lg-outer');
@@ -655,7 +655,7 @@
      */
     Plugin.prototype.counter = function () {
         if (this.s.counter) {
-            this.outer.querySelector(this.s.appendCounterTo).insertAdjacentHTML('beforeend', '<div id="lg-counter"><span id="lg-counter-current">' + (parseInt(this.index, 10) + 1) + '</span> / <span id="lg-counter-all">' + this.items.length + '</span></div>');
+            this.outer.querySelector(this.s.appendCounterTo).insertAdjacentHTML('beforeend', '<div id="lg-counter" id="lg-counter-current">' + (parseInt(this.index, 10) + 1) + '</span> / <span id="lg-counter-all">' + this.items.length + '</span></div>');
         }
     };
 

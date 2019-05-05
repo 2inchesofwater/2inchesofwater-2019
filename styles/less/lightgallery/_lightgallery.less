@@ -1,14 +1,15 @@
 // Core variables and mixins
 @import "lg-variables";
-/* @import "lg-mixins";
-@import "lg-fonts";
 @import "lg-theme-default";
 @import "lg-thumbnail";
+@import "lg-fullscreen";
+
+/* @import "lg-mixins";
+@import "lg-fonts";
 @import "lg-video";
 @import "lg-autoplay";
 @import "lg-zoom";
 @import "lg-pager";
-@import "lg-fullscreen";
 @import "lg-share"; */
 
 .group:before, .group:after {
@@ -31,11 +32,6 @@
     z-index: @zindex-outer;
     opacity: 0;
     transition: transition-base;
-
-    * {
-		box-sizing: border-box;
-    }
-
     &.lg-visible {
         opacity: 1;
     }
@@ -126,7 +122,7 @@
 
     .lg-img-wrap {
         position: absolute;
-        padding: 0 5px;
+        padding: 5rem;
         left: 0;
         right: 0;
         top: 0;
@@ -134,10 +130,6 @@
     }
 
     .lg-item {
-        &.lg-complete {
-            background-image: none;
-        }
-
         &.lg-current {
             z-index: @zindex-item;
         }
@@ -185,7 +177,7 @@
     right: 0;
     bottom: 0;
     z-index: @zindex-backdrop;
-    background-color: @modal-bg;
+    background-color: @body-bg;
     opacity: 0;
     transition: @transition-base;
     &.in {

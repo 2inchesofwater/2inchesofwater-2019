@@ -14,10 +14,27 @@ module.exports = function(grunt) {
 			}
 		}
 	},
+	postcss: {
+		options: {
+		  map: {
+			  inline: false, 
+			  annotation: 'styles/css/maps/' 
+		  },
+
+		  processors: [
+			require('pixrem')(), 
+			require('autoprefixer')({browsers: 'last 2 versions'}), 
+			require('cssnano')() 
+		  ]
+		},
+		dist: {
+		  src: 'styles/css/*.css'
+		}
+	},
 	watch: {
 		css: {
 			files: ['styles/less/*.less'],
-			tasks: ['less:develop']
+			tasks: ['less:develop','postcss']
 		}
 	}
   });
@@ -25,6 +42,7 @@ module.exports = function(grunt) {
   // Load the plugin that provides the "uglify" task.
   //grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-watch');
   // Default task(s).
   grunt.registerTask('default', ['watch:css','less:develop']);

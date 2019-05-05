@@ -1,0 +1,188 @@
+.mixin-lg-icon {
+	fill: @lg-icon-color;
+	cursor: pointer;
+	width: @lineHeight-xl;
+	height: @lineHeight-xl;
+	padding: 0;
+	transition: @transition-base !important;
+
+	&:hover {
+		fill: @lg-icon-hover-color;
+	}
+}
+
+.lg-actions,
+.lg-toolbar {
+	button {
+		background: transparent;
+		border: 0;
+	}
+	.lg-icon {
+		position: absolute;
+		top: 50%;
+		z-index: @zindex-controls;
+		.mixin-lg-icon;
+		&:focus {
+			.mixin-focus;
+		}
+        &.disabled {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+		svg {
+			.mixin-lg-icon;
+		}
+	}
+}
+
+
+// default theme
+.lg-actions {
+    .lg-next {
+        right: @site-gutter-base;
+    }
+
+    .lg-prev {
+        left: @site-gutter-base;
+    }
+}
+
+@include keyframes(lg-right-end) {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: -@spacer-xl;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+
+@include keyframes(lg-left-end) {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: @spacer-xl;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+
+.lg-outer {
+    &.lg-right-end {
+        .lg-object {
+            @include animation(lg-right-end 0.3s);
+            position: relative;
+        }
+    }
+
+    &.lg-left-end {
+        .lg-object {
+            @include animation(lg-left-end 0.3s);
+            position: relative;
+        }
+    }
+}
+
+// lg toolbar
+.lg-toolbar {
+    z-index: @zindex-toolbar;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 3.5rem @site-gutter-base; 
+
+    .lg-download,
+	.lg-fullscreen	{
+        display: none;
+    }
+	
+}
+
+// lightGallery title
+.lg-sub-html {
+    background-color: @lg-sub-html-bg;
+    bottom: 0;
+    color: @lg-sub-html-color;
+    font-size: 16px;
+    left: 0;
+    padding: 10px 40px;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    z-index: @zindex-subhtml;
+
+    h4 {
+        margin: 0;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 12px;
+        margin: 5px 0 0;
+    }
+}
+
+// lg image counter
+#lg-counter {
+    display: none;
+}
+
+// for idle state
+.lg-prev, .lg-next {
+    opacity: 1;
+    transition: transform 0.35s cubic-bezier(0, 0, 0.25, 1) 0s, opacity 0.35s cubic-bezier(0, 0, 0.25, 1) 0s, color 0.2s linear !important;
+}
+
+.lg-hide-items {
+    .lg-prev {
+        opacity: 0;
+        transform: translate3d(-@spacer-xl, 0, 0);
+    }
+
+    .lg-next {
+        opacity: 0;
+        transform: translate3d(@spacer-xl, 0, 0);
+    }
+
+    .lg-toolbar {
+        opacity: 0;
+        transform: translate3d(0, -@spacer-xl, 0);
+    }
+}
+
+// Starting effect
+body:not(.lg-from-hash){
+    .lg-outer {
+        &.lg-start-zoom{
+            .lg-object{
+                transform: scale3d(0.5, 0.5, 0.5);
+                opacity: 0;
+                transition: transform 250ms cubic-bezier(0, 0, 0.25, 1) 0s, opacity 250ms cubic-bezier(0, 0, 0.25, 1) !important;
+                transform-origin: 50% 50%;
+            }
+            .lg-item.lg-complete{
+                .lg-object{
+                    transform: scale3d(1, 1, 1);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
